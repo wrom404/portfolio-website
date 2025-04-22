@@ -13,7 +13,7 @@ export const projects: Project[] = [
       'Implemented role-based access control (RBAC) for admins and users',
       'Integrated ClickSend API for automated SMS notifications',
     ],
-    technologies: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'TailwindCSS', 'Zustand', 'Tanstack Query', 'Drizzle-ORM', 'ShadCn', 'ReChart'],
+    technologies: ['TypeScript', 'React', 'Node.js', 'Express', 'PostgreSQL'],
     link: 'https://github.com/wrom404/capstone',
     img: event
   },
@@ -25,7 +25,7 @@ export const projects: Project[] = [
       'Designed a structured PostgreSQL database for product and order management',
       'Implemented a backend using Node.js and Express with RESTful APIs',
     ],
-    technologies: ['TypeScript', 'React', 'Node.js', 'Express', 'TailwindCSS', 'PostgreSQL', 'Zustand', 'Tanstack Query', 'Drizzle-ORM'],
+    technologies: ['TypeScript', 'React', 'Node.js', 'Express', 'PostgreSQL'],
     link: 'https://github.com/wrom404/kofe-latte-shop',
     img: coffee
   },

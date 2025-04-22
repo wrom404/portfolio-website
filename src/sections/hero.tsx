@@ -8,7 +8,7 @@ const Hero = () => {
         <h2 className="text-gray-200 text-3xl mb-4">Hi, I am Wendel Rom</h2>
         <h1 className="text-4xl sm:text-6xl mb-4">Software Developer</h1>
 
-        <p className="text-sm sm:text-lg text-gray-400">
+        <p className="text-sm sm:text-lg text-indigo-border-indigo-600">
           {`{ TypeScript, React, Node.js, Express, PostgreSQL, TailwindCss... }`}
         </p>
 
@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="flex gap-4">
           <a
             href="#projects"
-            className="bg-cyan-400 hover:bg-cyan-300 text-black font-semibold px-6 py-3 rounded-full transition"
+            className="bg-indigo-600 hover:bg-indigo-500 text-black font-semibold px-6 py-3 rounded-full transition"
           >
             See my dev work
           </a>
@@ -29,7 +29,7 @@ const Hero = () => {
             <a
               href="/cv.pdf"
               download
-              className="border-b border-cyan-400 text-cyan-400 hover:text-cyan-300 transition py-1.5"
+              className="border-b border-indigo-600 text-indigo-600 hover:text-indigo-500 hover:border-indigo-500 transition py-1.5"
             >
               Download CV
             </a>

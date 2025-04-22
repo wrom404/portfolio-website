@@ -1,13 +1,6 @@
-import { useState } from "react";
 import { Project } from "../types/types";
 
 const CardProject = ({ project }: { project: Project }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const techList = project.technologies.join(" • ");
-
-  const handleExpand = () => {
-    setIsExpanded((prev) => !prev);
-  };
 
   return (
     <div className="w-96 min-h-96 bg-[#121224] p-4 text-gray-100 rounded-lg">
@@ -29,27 +22,12 @@ const CardProject = ({ project }: { project: Project }) => {
       </div>
 
       <div className="text-sm w-full py-6">
-        <p
-          className={`transition-all duration-300 text-gray-400 ${
-            isExpanded
-              ? "whitespace-normal overflow-visible"
-              : "overflow-hidden whitespace-nowrap text-ellipsis"
-          }`}
-        >
-          {techList}
-        </p>
-
-        {techList.length > 50 && (
-          <button
-            onClick={handleExpand}
-            className="text-cyan-400 hover:underline text-xs"
-          >
-            {isExpanded ? "Show Less" : "Read More"}
-          </button>
-        )}
+        {project.technologies.map((tech) => (
+          <span className="text-xs text-gray-400 bg-[var(--background-color)] py-1 px-2 mr-1 rounded-md">{tech}</span>
+        ))}
       </div>
       <div>
-        <div className="text-lg">{project.title}</div>
+        <div className="text-lg text-gray-100">{project.title}</div>
         <div className="text-base mt-2 text-gray-300">
           {project.description}
         </div>
