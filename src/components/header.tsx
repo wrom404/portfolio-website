@@ -1,11 +1,35 @@
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react"; // You can use any icons
+
 const Header = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const controlHeader = () => {
+    const currentScrollY = window.scrollY;
+    setIsVisible(currentScrollY < lastScrollY || currentScrollY < 10);
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlHeader);
+    return () => window.removeEventListener("scroll", controlHeader);
+  }, [lastScrollY]);
+
   return (
-    <header className="flex justify-around items-center bg-[var(--background-color)] text-gray-100 py-5 absolute w-full">
-      <div className="cursor-pointer text-lg">
-        wendel. <span className="text-indigo-600">rom</span>
-      </div>
-      <div className="">
-        <ul className="flex gap-4">
+    <header
+      className={`fixed top-0 left-0 z-50 w-full backdrop-blur-md bg-[var(--background-color)/60] text-gray-100 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="text-lg font-bold cursor-pointer">
+          wendel.<span className="text-indigo-600">rom</span>
+        </div>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-6 items-center text-sm font-medium">
           <li className="hover:text-gray-300">
             <a href="/">Home</a>
           </li>
@@ -21,16 +45,66 @@ const Header = () => {
           <li className="hover:text-gray-300">
             <a href="#contact">Contact</a>
           </li>
+          <li>
+            <button className="border rounded-2xl px-3 py-1.5 text-sm text-indigo-500 border-indigo-500 hover:text-indigo-400 hover:border-indigo-400">
+              Contact me
+            </button>
+          </li>
         </ul>
-      </div>
-      <div className="flex items-center gap-2.5">
-        <div className="">
-          <button className="border rounded-2xl px-3 py-1.5 text-sm text-indigo-500 border-indigo-500 hover:text-indigo-400 hover:border-indigo-400 cursor-pointer">
-            Contact me
+
+        {/* Mobile Toggle */}
+        <div className="md:hidden flex items-center">
+          <button onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-        <div className="">toggle</div>
       </div>
+
+      {/* Mobile Dropdown */}
+      {menuOpen && (
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out px-4 
+          ${
+            menuOpen
+              ? "max-h-[500px] opacity-100 translate-y-0"
+              : "max-h-0 opacity-0 -translate-y-2"
+          }
+        `}
+        >
+          <ul className="flex flex-col gap-4 py-4 text-sm font-medium">
+            <li>
+              <a href="/" onClick={() => setMenuOpen(false)}>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#skills" onClick={() => setMenuOpen(false)}>
+                Skills
+              </a>
+            </li>
+            <li>
+              <a href="#projects" onClick={() => setMenuOpen(false)}>
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#services" onClick={() => setMenuOpen(false)}>
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#contact" onClick={() => setMenuOpen(false)}>
+                Contact
+              </a>
+            </li>
+            <li>
+              <button className="border rounded-2xl px-3 py-1.5 text-sm text-indigo-500 border-indigo-500 hover:text-indigo-400 hover:border-indigo-400">
+                Contact me
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
     </header>
   );
 };
