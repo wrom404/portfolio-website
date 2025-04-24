@@ -10,7 +10,7 @@ const Card = ({ technology }: { technology: Technology }) => {
           className="h-16 sm:h-20 lg:h-24 transition-transform group-hover:scale-105"
         />
       </div>
-      <div className="text-center text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs sm:text-sm">
+      <div className="mt-4 text-center text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs sm:text-sm">
         {technology.name}
       </div>
     </div>

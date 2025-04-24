@@ -68,7 +68,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="/cv.pdf"
+            href="../assets/cv/cv.pdf"
             download
             className="border-b border-indigo-600 text-indigo-600 hover:text-indigo-500 hover:border-indigo-500 transition py-1.5 text-sm"
           >

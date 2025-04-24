@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react"; // You can use any icons
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -24,32 +25,66 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="text-lg font-bold cursor-pointer">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-lg font-bold cursor-pointer"
+        >
           wendel.<span className="text-indigo-600">rom</span>
-        </div>
+        </motion.div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 items-center text-sm font-medium">
-          <li className="hover:text-gray-300">
+          <motion.li
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="hover:text-gray-300"
+          >
             <a href="/">Home</a>
-          </li>
-          <li className="hover:text-gray-300">
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="hover:text-gray-300"
+          >
             <a href="#skills">Skills</a>
-          </li>
-          <li className="hover:text-gray-300">
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="hover:text-gray-300"
+          >
             <a href="#projects">Projects</a>
-          </li>
-          <li className="hover:text-gray-300">
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="hover:text-gray-300"
+          >
             <a href="#services">Services</a>
-          </li>
-          <li className="hover:text-gray-300">
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="hover:text-gray-300"
+          >
             <a href="#contact">Contact</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
             <button className="border rounded-2xl px-3 py-1.5 text-sm text-indigo-500 border-indigo-500 hover:text-indigo-400 hover:border-indigo-400">
               Contact me
             </button>
-          </li>
+          </motion.li>
         </ul>
 
         {/* Mobile Toggle */}
