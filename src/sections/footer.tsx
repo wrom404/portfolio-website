@@ -9,7 +9,9 @@ const Footer = () => {
     <footer className="bg-[#0a0a0a]" id="footer">
       <div className="py-6 max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center md:justify-between items-center text-gray-300  gap-4">
         <div className="text-base text-center md:text-left">
-          wendel.<span className="text-indigo-600">rom</span>
+          <a href="">
+            wendel.<span className="text-indigo-600">rom</span>
+          </a>
         </div>
         <div className="text-sm text-center">
           © 2025 Personal Portfolio. All rights reserved.

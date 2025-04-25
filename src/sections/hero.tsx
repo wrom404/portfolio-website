@@ -7,7 +7,7 @@ const Hero = () => {
   const fullText = "Hi, I am Wendel Rom";
 
   useEffect(() => {
-    const startDelay = 1000; // 1 second before typing starts
+    const startDelay = 1300; // 1.3 second before typing starts
     const typingSpeed = 100; // 0.1s per character
     let currentIndex = 0;
 

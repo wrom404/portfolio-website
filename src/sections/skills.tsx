@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Skills = () => {
   return (
     <div
-      className="min-h-[90vh] flex flex-col justify-center items-center max-w-7xl mx-auto px-4 sm:px-8"
+      className="min-h-[90vh] flex flex-col justify-center items-center w-full max-w-7xl mx-auto px-4 sm:px-8"
       id="skills"
     >
       <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-gray-100 text-center mt-10 mb-4">
@@ -26,7 +26,7 @@ const Skills = () => {
               ease: "easeInOut",
               delay: index * 0.05,
             }}
-            viewport={{ amount: 0.1, once: true }}
+            viewport={{ amount: 0.5, once: true }}
           >
             <Card technology={technology} />
           </motion.div>

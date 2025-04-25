@@ -31,7 +31,9 @@ const Header = () => {
           transition={{ duration: 0.5 }}
           className="text-lg font-bold cursor-pointer"
         >
-          wendel.<span className="text-indigo-600">rom</span>
+          <a href="">
+            wendel.<span className="text-indigo-600">rom</span>
+          </a>
         </motion.div>
 
         {/* Desktop Menu */}
@@ -82,7 +84,7 @@ const Header = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <button className="border rounded-2xl px-3 py-1.5 text-sm text-indigo-500 border-indigo-500 hover:text-indigo-400 hover:border-indigo-400">
-              Contact me
+              <a href="#contact">Contact me</a>
             </button>
           </motion.li>
         </ul>

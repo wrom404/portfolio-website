@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="py-16 min-h-screen h-full flex justify-center items-center"
+      className="py-16 w-full min-h-screen h-full flex justify-center items-center"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-4 text-center">

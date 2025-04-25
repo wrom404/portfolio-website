@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Projects = () => {
   return (
     <div
-      className="min-h-screen max-w-7xl mx-auto flex flex-col justify-center items-center sm:px-8"
+      className="min-h-screen w-full max-w-7xl mx-auto flex flex-col justify-center items-center sm:px-8 max-md:px-4"
       id="projects"
     >
       <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-gray-100 text-center mt-10 mb-4">

@@ -188,9 +188,9 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 w-full rounded-md"
+            className="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 w-full rounded-md cursor-pointer"
           >
-            Send
+            Send a Message
           </button>
         </motion.form>
       </div>
