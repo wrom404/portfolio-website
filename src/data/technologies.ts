@@ -1,4 +1,5 @@
 import { Technology } from '../types/types';
+import githubLogo from "../assets/imgs/github-mark-white.png"
 
 export const technologies: Technology[] = [
   {
@@ -14,12 +15,20 @@ export const technologies: Technology[] = [
     icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
   },
   {
-    name: 'Node.js',
+    name: 'NextJs',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+  },
+  {
+    name: 'NodeJs',
     icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg',
   },
   {
     name: 'Express',
     icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg',
+  },
+  {
+    name: 'NestJs',
+    icon: 'https://nestjs.com/img/logo-small.svg',
   },
   {
     name: 'TailwindCSS',
@@ -34,8 +43,20 @@ export const technologies: Technology[] = [
     icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg',
   },
   {
+    name: 'Drizzle ORM',
+    icon: 'https://avatars.githubusercontent.com/u/108468352?s=200&v=4',
+  },
+  {
+    name: 'Prisma',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg',
+  },
+  {
     name: 'Git',
     icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg',
+  },
+  {
+    name: 'GitHub',
+    icon: githubLogo,
   },
   {
     name: 'Zustand',
@@ -46,7 +67,11 @@ export const technologies: Technology[] = [
     icon: 'https://raw.githubusercontent.com/TanStack/query/main/media/emblem-light.svg',
   },
   {
-    name: 'Drizzle ORM',
-    icon: 'https://avatars.githubusercontent.com/u/108468352?s=200&v=4',
+    name: 'Postman',
+    icon: 'https://voyager.postman.com/logo/postman-logo-icon-orange.svg',
+  },
+  {
+    name: 'VS Code',
+    icon: 'https://code.visualstudio.com/assets/images/code-stable.png',
   },
 ];
